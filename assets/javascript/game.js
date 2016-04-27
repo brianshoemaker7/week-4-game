@@ -21,23 +21,32 @@ $(document).ready(function () {
 
 
 	// This is where you keep the total score each round.
-	$('.numberTotal').html(myTotal);
+	$('.numberTotal').html('Your Total: ' + myTotal);
 	
 	// The counters for wins and losses.
-	$('.winCount').html(winCounter);
-	$('.loseCount').html(loseCounter);
+	$('.winCount').html('Won: ' + winCounter);
+	$('.loseCount').html('Lost: ' + loseCounter);
 
 	
-
+	// Math for the random number to use
 	function randomNumber(min, max) {
 		return Math.floor(Math.random() * (max - min + 1) + min)	};
 
+	
+	// Sets sounds for the clicks and win
+	var audio = new Audio('assets/audio/gemclick.mp3');
+	var applause = new Audio('assets/audio/applause.mp3');
+	
+	// Generates the random number
 	var compNumber = randomNumber(19, 120);
-	$('.compNumber').html(compNumber);
+	$('.compNumber').html('No. to Match: ' + compNumber);
 
+
+	// Adds the gem numbers to the total
 	$(".blueGem").click(function() {
 		myTotal += bluGem;
-		$('.numberTotal').html(+myTotal);
+		$('.numberTotal').html('Your Total: ' + myTotal);
+		audio.play();
 		winLose()
 
 	});
@@ -45,7 +54,8 @@ $(document).ready(function () {
 
 	$(".redGem").click(function() {
 		myTotal += redGem;
-		$('.numberTotal').html(myTotal);
+		$('.numberTotal').html('Your Total: ' + myTotal);
+		audio.play();
 		winLose()
 
 	});
@@ -53,7 +63,8 @@ $(document).ready(function () {
 
 	$(".greenGem").click(function() {
 		myTotal += grnGem;
-		$('.numberTotal').html(myTotal);
+		$('.numberTotal').html('Your Total: ' + myTotal);
+		audio.play();
 		winLose()
 
 	});
@@ -61,36 +72,40 @@ $(document).ready(function () {
 
 	$(".yellowGem").click(function() {
 		myTotal += yelGem;
-		$('.numberTotal').html(myTotal);
+		$('.numberTotal').html('Your Total: ' + myTotal);
+		audio.play();
 		winLose()
 	});
 
-
+	// Check to see if the player won or lost
 	var winLose = function() {
 
 		if (myTotal == compNumber) {
-			alert("Congratulations, We have a winner!")
+			alert("Congratulations, We have a winner!");
+			applause.play();
 			winCounter++;
-			$('.winCount').html(winCounter);
+			$('.winCount').html('Won: ' + winCounter);
 			restart();
 		}
 
 		if (myTotal > compNumber) {
 			alert("Sorry, You lose this round.");
+			boo.play();
 			loseCounter++;
-			$('.loseCount').html(loseCounter);;
+			$('.loseCount').html('Lost: ' + loseCounter);;
 			restart();
 
 
 		}
 	}
 
+	// Resets the game to play again
 	var restart = function() {
 
 		myTotal = 0;
-		$(".numberTotal").html(myTotal);
+		$(".numberTotal").html('Your Total: ' + myTotal);
 		compNumber = randomNumber(19, 120);
-		$('.compNumber').html(compNumber);
+		$('.compNumber').html('No. to Match: ' + compNumber);
 
 
 		bluGem = Math.floor((Math.random() * 12) + 1);

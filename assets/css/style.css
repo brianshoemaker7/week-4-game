@@ -1,24 +1,113 @@
 
 body {
 
-	background: #999;	
+	font-family: 'Play', sans-serif;
+    background: #999;
+    height: 100% /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#999, #555); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#999, #555); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#999, #555); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#999, #555); /* Standard syntax (must be last) */
+}
+}
+
+.container {
+
+		
+		width: 60%;
+		margin-left: 20%;
+		margin-right: 20%;
+		align-content: center;
+		padding: 0 auto 0 auto;
+
 }
 
 h1 { 
-	color: #fff ;
-	 font-size: 80px;
-	 text-shadow:  1px 1px 20px #2dd827;
+	    color: #fff ;
+	    font-size: 80px;
+	    text-shadow:  2px 2px 5px #000;
+		margin: 0px 0px 50px 0px;
+		text-align: center;
+
 	 }
 
 
 .instructions {
 
+		width: 30%;
 		color: #fff;
-		font-size: 25px;
+		font-size: 20px;
+		text-shadow:  2px 2px 5px #000;
+		margin-left: 35%;
+		margin-right: 35%;
+		text-align: justify;
+
+
+}
+
+
+.row {
+		width: 675px;
+		height: 75px;
+		float: left;
+		margin: 75px 0px 0px 0px;
+		
+
+}
+
+
+.score {
+
+	margin: 25px 0px 25px 0px;
+	float: left;
+	width: 150px;
+	text-align: center;
+
 
 }
 
 .gems {
 
+	margin: 0px 0px 200px 0px;
 	float: left;
+
+}
+
+
+.compNumber {
+
+		color: #fff;
+		font-size: 20px;
+		text-shadow:  2px 2px 5px #000;
+
+}
+
+.numberTotal {
+
+		color: #fff;
+		font-size: 20px;
+		text-shadow:  2px 2px 5px #000;
+
+}
+
+.winCount {
+
+		color: #fff;
+		font-size: 20px;
+		text-shadow:  2px 2px 5px #000;
+
+}
+
+.loseCount {
+
+		color: #fff;
+		font-size: 20px;
+		text-shadow:  2px 2px 5px #000;
+
+}
+
+
+.clear {
+
+	clear: both;
 }

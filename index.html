@@ -4,64 +4,80 @@
 	<meta charset="UTF-8">
 	<title>UCF Bootcamp - Gem Collector</title>
 
-	<!-- Jquery reference -->
+
 	<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
 
-    <!-- Pull The javascript file -->
+
 	<script src='assets/javascript/game.js'></script>
 
-	<!-- CSS / Stylesheets -->
+
 	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
 
+	<link href='https://fonts.googleapis.com/css?family=Play' rel='stylesheet' type='text/css'>
+
+
 </head>
 <body>
+
+<div class="container">
 	
 	<!-- Page header / Game name -->
 	<h1>Gem Collector</h1>
 	
 		<!-- This is the div that holds the instructions for the game. -->
-		<div class="instructions">You will be given a randmom number at the start of the game. <br><br>
+		<div class="instructions">You will be given a random number at the start of the game. <br><br>
 
-The object of the game is to match the random number wihtout going over.<br><br>
+		The object of the game is to match the random number wihtout going over.<br><br>
 
-The four crystals below each have a hidden value. By clicking on a crystal, you will add that gem's value to your total score.<br><br>
+		The four crystals below each have a hidden value. By clicking on a crystal, you will add that gem's value to your total score.<br><br>
 
-Each time the game starts all the gems reset with different random values.</div>
-			
-		<!-- The div for the computer's generated number. -->
-		<div class="container"></div>
+		Each time the game starts all the gems reset with different random values.
 
-		<div class="compNumber"></div>
 
-		<!-- The div for my added number total.-->
-		<div class="numberTotal"></div>
+		<div class="row">
+			<!-- The div for the computer's generated number. -->
+			<div class="score compNumber"></div>
 
-		<!-- This div holds the gems. -->
-		<div class="gems">
+			<!-- The div for my added number total.-->
+			<div class="score numberTotal"></div>
 
-			<div class="blueGem">
-				<img src="assets/images/bluegem.jpg"></div>
+			<!-- This list the wins and losses so far. -->
+			<div class="score winCount"></div>
 
-			<div class="redGem">
-				<img src="assets/images/redgem.jpg"></div>
-
-			<div class="greenGem">
-				<img src="assets/images/greengem.jpg"></div>
-
-			<div class="yellowGem">
-				<img src="assets/images/yellowgem.jpg"></div>
+			<div class="score loseCount"></div>
 
 		</div>
+
+		<!-- This clears the float -->
+		<div class="clear"></div>
+
+		<!-- This div holds the gems. -->
+		<div class="row">
+
+			<div class="gems blueGem">
+				<img src="assets/images/bluegem.jpg"></div>
+
+			<div class="gems redGem">
+				<img src="assets/images/redgem.jpg"></div>
+
+			<div class="gems greenGem">
+				<img src="assets/images/greengem.jpg"></div>
+
+			<div class="gems yellowGem">
+				<img src="assets/images/yellowgem.jpg"></div>
+
+		</div></div>
+			
 		
-		<!-- This list the wins and losses so far. -->
-		<div class="container"></div>
-		<div class="winCount"></div>
+		
+		
+		
 
-		<div class="loseCount"></div>
+		
 
 
-					
+	</div>				
 </body>
 </html>
