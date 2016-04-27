@@ -14,13 +14,11 @@ h1 {
 .instructions {
 
 		color: #fff;
-		font-size: 35px;
+		font-size: 25px;
 
 }
 
-.gems { 
+.gems {
 
-	display:inline-block;
-	padding-top: 25px;
-
- }
+	float: left;
+}

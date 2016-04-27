@@ -69,25 +69,25 @@ $(document).ready(function () {
 	var winLose = function() {
 
 		if (myTotal == compNumber) {
-			winCounter++;
 			alert("Congratulations, We have a winner!")
-			$('.wins').html(winCounter);
+			winCounter++;
+			$('.winCount').html(winCounter);
 			restart();
 		}
 
 		if (myTotal > compNumber) {
-			loseCounter++;
 			alert("Sorry, You lose this round.");
-			$('.losses').html(loseCounter);;
+			loseCounter++;
+			$('.loseCount').html(loseCounter);;
 			restart();
 
 
 		}
 	}
 
-	var restart = function () {
+	var restart = function() {
 
-		myNumber = 0;
+		myTotal = 0;
 		$(".numberTotal").html(myTotal);
 		compNumber = randomNumber(19, 120);
 		$('.compNumber').html(compNumber);
