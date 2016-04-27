@@ -42,7 +42,7 @@ $(document).ready(function () {
 	$('.compNumber').html('No. to Match: ' + compNumber);
 
 
-	// Adds the gem numbers to the total
+	// Adds the gem number to the total
 	$(".blueGem").click(function() {
 		myTotal += bluGem;
 		$('.numberTotal').html('Your Total: ' + myTotal);
@@ -90,7 +90,6 @@ $(document).ready(function () {
 
 		if (myTotal > compNumber) {
 			alert("Sorry, You lose this round.");
-			boo.play();
 			loseCounter++;
 			$('.loseCount').html('Lost: ' + loseCounter);;
 			restart();
